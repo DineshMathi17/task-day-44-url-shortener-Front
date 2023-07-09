@@ -3,11 +3,29 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter as Router} from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import AppProvider from './provider/provider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Router>
+    <AppProvider>
     <App />
+    </AppProvider>
+    </Router>
+    <ToastContainer
+      position="top-right"
+      autoClose={2000}
+      closeOnClick
+      pauseOnFocusLoss
+      pauseOnHover
+      theme="light"
+    />
+    <ToastContainer />
+
   </React.StrictMode>
 );
 
