@@ -94,7 +94,7 @@ export function Login() {
       </form>
 
       <div className="text-center">
-        <p className="mb-0">Don't have an account? <a href="/signup" class="text-white-50 fw-bold">Sign Up</a></p>
+        <p className="mb-0">Don't have an account? <a href="/signup" class="text-black-50 fw-bold">Sign Up</a></p>
 
       </div>
 
