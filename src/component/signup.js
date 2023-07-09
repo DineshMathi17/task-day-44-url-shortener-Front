@@ -14,7 +14,7 @@ import * as yup from 'yup'
 
 const userSchemaValidation = yup.object({
   first_name: yup.string().required("Please fill in your first name"),
-  last_name: yup.string().required("Please fill in your last_name"),
+  last_name: yup.string().required("Please fill in your last name"),
   email: yup.string().required("Please fill in your Email"),
   password: yup.string().required("please write proper password"),
  
