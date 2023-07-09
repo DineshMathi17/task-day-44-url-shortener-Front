@@ -13,7 +13,8 @@ import * as yup from 'yup'
 
 
 const userSchemaValidation = yup.object({
-  name: yup.string().required("Please fill in your Name"),
+  first_name: yup.string().required("Please fill in your first name"),
+  last_name: yup.string().required("Please fill in your last_name"),
   email: yup.string().required("Please fill in your Email"),
   password: yup.string().required("please write proper password"),
  
@@ -42,7 +43,8 @@ export function Signup() {
   }
   const { values, handleChange, handleSubmit, handleBlur, errors, touched } = useFormik({
     initialValues: {
-      name:'',
+      first_name:'',
+      last_name:'',
       email: '',
       password: '',
     },
@@ -63,12 +65,19 @@ export function Signup() {
 <MDBContainer fluid style={{height:"100vh" }} className="p-3 my-5 d-flex flex-column w-50">
 <form onSubmit={handleSubmit} className="text-areas">
   <MDBInput wrapperClass='mb-4'
-    label='Name'
+    label='First Name'
     onChange={handleChange}
     onBlur={handleBlur}
-    value={values.name}
-    id='form1' type='name'  name='name'/>
-   {touched.name && errors.name ? <p style={{ color: "crimson" }}>{errors.name}</p> : ""}
+    value={values.first_name}
+    id='form1' type='first_name'  name='first_name'/>
+   {touched.first_name && errors.first_name ? <p style={{ color: "crimson" }}>{errors.first_name}</p> : ""}
+   <MDBInput wrapperClass='mb-4'
+    label='Last Name'
+    onChange={handleChange}
+    onBlur={handleBlur}
+    value={values.last_name}
+    id='form1' type='last_name'  name='last_name'/>
+   {touched.last_name && errors.last_name ? <p style={{ color: "crimson" }}>{errors.last_name}</p> : ""}
 
   <MDBInput wrapperClass='mb-4'
     label='Email address'
