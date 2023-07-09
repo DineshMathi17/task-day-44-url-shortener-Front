@@ -95,7 +95,7 @@ export function Signup() {
   </form>
 
   <div className="text-center">
-    <p className="mb-0">Already have an account? <a href="/login" class="text-white-50 fw-bold">Login</a></p>
+    <p className="mb-0">Already have an account? <a href="/login" class="text-black-50 fw-bold">Login</a></p>
 
   </div>
 
